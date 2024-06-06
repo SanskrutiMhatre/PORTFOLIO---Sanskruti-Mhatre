@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <title>Sanskruti Mhatre | Portfolio</title>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="nav__content">
+          <div class="logo"><a href="#">PORTFOLIO</a></div>
+          <label for="check" class="checkbox">
+            <i class="ri-menu-line"></i>
+          </label>
+          <input type="checkbox" name="check" id="check" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#"  id="resume-link">Resume</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <section class="section">
+        <div class="section__container">
+          <div class="content">
+            <p class="subtitle">HELLO</p>
+            <h1 class="title">
+              I'm <span>Sanskruti Mhatre<br />a</span>
+              <p class="typed-text"></p>
+            </h1>
+            <p class="description">
+              Welcome to my portfolio!  I'm Sanskruti, a skilled and creative developer with a passion
+               for crafting beautiful, responsive, and user-friendly websites. 
+               I thrive on developing innovative solutions through programming and web development, constantly seeking to push the boundaries of what's possible in the digital space.
+
+            </p>
+            <div class="action__btns">
+              <button class="hire__me">Hire Me</button>
+              <button class="portfolio">Know more about me</button>
+            </div>
+          </div>
+          <div class="image">
+            <img src="assets/profile.jpeg" alt="profile" />
+          </div>
+        </div>
+      </section><br>
+      <section id="about" class="about">
+        <div class="about__container">
+          <div class="about__image">
+          
+            <img src="assets/profile.jpeg" alt="About Profile">
+        </div>
+          <div class="about__content">
+            <h2>About Me</h2>
+            <p>I am Sanskruti Mhatre, an enthusiastic Information Technology student with a strong focus on cybersecurity and web development. I am passionate
+               about creating innovative solutions and continuously enhancing my skills in programming and technology.
+              </p>
+              <h3>Profile Summary</h3>
+            <div class="about__info">
+              <div class="info__column">
+                <p><strong>Birthday:</strong> 21 Sept 2003</p>
+                <p><strong>Phone:</strong> 9529412675</p>
+                <p><strong>City:</strong> Mumbai, Maharashtra</p>
+                <p><strong>Freelance:</strong> Available</p>
+
+
+              </div>
+              <div class="info__column">
+                <p><strong>Languages:</strong> English, Marathi, Hindi</p>
+                <p><strong>Degree:</strong> BE in Information Technology</p>
+                <p><strong>GitHub:</strong> github.com/SanskrutiMhatre</p>
+                <p><strong>Email:</strong> mhatresanskruti42@gmail.com</p>
+
+              </div>
+            </div>
+            <p>
+              With proficiency in multiple programming languages including Python, Java, and C++, I have developed a versatile skill set that spans both frontend and backend development. I am adept at using web technologies like HTML, CSS, and JavaScript to create responsive and user-friendly websites. My technical expertise extends to database management with MySQL and Firebase, and I am experienced with backend services such as PHP. Additionally, I am well-versed in using tools like Git, GitHub, 
+              and Docker, which streamline my development workflow and enhance project collaboration. </p>
+          </div>
+        </div>
+      </section>
+      <div class="popup" id="resume-popup">
+        <div class="popup-content">
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <embed src="resume.pdf" type="application/pdf" width="100%" height="100%">
+        </div>
+      </div>
+      <br>
+
+
+      
+      <section id="projects" class="projects-section">
+        <div class="container">
+          <h2 class="section-title">Projects</h2>
+          <div class="projects-grid">
+            <div class="project-card">
+              <h3 class="project-title">GROUP EXPENSES TRACKER</h3>
+              <h1 class="subproject">(Android Application)</h1>
+              <p class="project-description">
+              A group expense tracker application is designed to simplify the management and sharing of expenses among multiple people. It enables transparent tracking, automatic calculations,
+               and fair distribution of costs, ensuring everyone pays their fair share effortlessly.</p>
+              <a href="https://github.com/SanskrutiMhatre/GroupExpensesTracker-master" class="project-link" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-card">
+              <h3 class="project-title">MANASHEAL -<br> MENTAL WELLBEING</h3>
+              <h1 class="subproject">(Web Application)</h1>
+
+              <p class="project-description">Manasheal is a website designed to foster mental health awareness and support. Our project aims to contribute to the global effort of ensuring healthy lives and promoting well-being for individuals of all ages.
+
+              </p>
+              <a href="https://github.com/SanskrutiMhatre/Manasheal" class="project-link" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-card">
+              <h3 class="project-title"> SAKHI APP - <br>MENSTRUAL CYCLE TRACKING</h3>
+              <h1 class="subproject">(Web Application)</h1>
+
+              <p class="project-description">The Sakhi App is a user-friendly menstrual cycle tracking application designed to help
+                 individuals monitor their periods, ovulation, and overall reproductive health.</p>
+              <a href="https://github.com/SanskrutiMhatre/Sakhi" class="project-link" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-card">
+              <h3 class="project-title">JOB PORTAL</h3>
+              <h1 class="subproject">(Web Application)</h1>
+
+              <p class="project-description">
+                A job portal is an application that connects job seekers with potential employers, streamlining the job search and recruitment process. It offers a comprehensive database of job listings, company profiles, and application tools, making it easier for candidates to find suitable employment opportunities and for employers to identify qualified talent.</p>
+              <a href="https://github.com/Ruchita-20/Internship_Talent_Corner" class="project-link" target="_blank">View on GitHub</a>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+      <br>
+
+
+      <br><section id="contact" class="contact-section">
+        <div class="container">
+          <h2 class="section-title">Contact Me</h2>
+          <div class="contact-info">
+            <div class="contact-details">
+              <p><strong><i class="ri-linkedin-box-fill"></i> LinkedIn:</strong> <a href="https://www.linkedin.com/in/SanskrutiMhatre" target="_blank"> linkedin.com/in/SanskrutiMhatre</a></p>
+              <p><strong><i class="ri-mail-fill"></i> Email:</strong> <a href="mailto:mhatresanskruti42@gmail.com"> mhatresanskruti42@gmail.com</a></p>
+              <p><strong><i class="ri-github-fill"></i> GitHub:</strong> <a href="https://github.com/SanskrutiMhatre" target="_blank"> github.com/SanskrutiMhatre
+     </a></p><p><strong><i class="ri-whatsapp-fill"></i> Phone:</strong> 9529412675</p>
+            </div>
+            <div class="contact-form">
+              <form id="contact-form" action="https://formspree.io/f/{your-form-id}" method="POST">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
