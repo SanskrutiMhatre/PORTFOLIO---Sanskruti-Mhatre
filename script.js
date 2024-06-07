@@ -25,6 +25,26 @@ document.getElementById("resume-link").addEventListener("click", function(event)
   openPopup(); // Open the popup
 });
 
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault();
 
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  // Simulate saving message and show success popup
+  showSuccessPopup();
+
+  // Clear the form
+  document.getElementById("contact-form").reset();
+});
+function showSuccessPopup() {
+  document.getElementById("success-popup").style.display = "block";
+}
+
+// Function to close the success popup
+function closeSuccessPopup() {
+  document.getElementById("success-popup").style.display = "none";
+}
 
 
