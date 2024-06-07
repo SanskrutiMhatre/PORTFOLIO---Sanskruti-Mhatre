@@ -48,3 +48,11 @@ function closeSuccessPopup() {
 }
 
 
+// Event listeners for the "Hire Me" and "Portfolio" buttons
+document.querySelector('.hire__me').addEventListener('click', function() {
+  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+});
+
+document.querySelector('.portfolio').addEventListener('click', function() {
+  document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+});
