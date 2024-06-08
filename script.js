@@ -6,8 +6,6 @@ document.addEventListener("DOMContentLoaded", function() {
       loop: true
     });
   });
-  
-
 
   // Function to open the popup
 function openPopup() {
