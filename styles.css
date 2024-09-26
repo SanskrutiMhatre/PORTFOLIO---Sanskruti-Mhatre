@@ -395,20 +395,6 @@ ul li a:hover {
   transform: translateX(0);
 }
 
-/* Media query for mobile screens (width < 750px) */
-@media (max-width: 750px) {
-  .about__content {
-    transform: translateX(-50px); /* Less distance to travel on smaller screens */
-    transition: all 0.1s ease-out; /* Slightly faster transition for mobile */
-  }
-
-  .about__content.show {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-
 
 
 
