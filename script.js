@@ -66,12 +66,6 @@ function isInViewport(element) {
   );
 }
 
-document.addEventListener('scroll', function() {
-  const aboutSection = document.querySelector('.about__content');
-  if (isInViewport(aboutSection)) {
-    aboutSection.classList.add('show');
-  }
-});
 
 window.onload = function() {
   document.querySelector('.contact-details').style.opacity = '1';
