@@ -387,7 +387,7 @@ ul li a:hover {
 .about__content {
   opacity: 0;
   transform: translateX(-100px);
-  transition: all 0.6s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .about__content.show {
@@ -399,7 +399,7 @@ ul li a:hover {
 @media (max-width: 750px) {
   .about__content {
     transform: translateX(-50px); /* Less distance to travel on smaller screens */
-    transition: all 0.5s ease-out; /* Slightly faster transition for mobile */
+    transition: all 0.3s ease-out; /* Slightly faster transition for mobile */
   }
 
   .about__content.show {
