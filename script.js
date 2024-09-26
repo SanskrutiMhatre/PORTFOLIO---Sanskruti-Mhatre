@@ -54,3 +54,49 @@ document.querySelector('.hire__me').addEventListener('click', function() {
 document.querySelector('.portfolio').addEventListener('click', function() {
   document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
 });
+
+
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+document.addEventListener('scroll', function() {
+  const aboutSection = document.querySelector('.about__content');
+  if (isInViewport(aboutSection)) {
+    aboutSection.classList.add('show');
+  }
+});
+
+window.onload = function() {
+  document.querySelector('.contact-details').style.opacity = '1';
+  document.querySelector('.contact-form').style.opacity = '1';
+};
+
+function handleIntersection(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Add 'visible' class to the elements when they come into view
+      entry.target.classList.add('visible');
+      // Unobserve the element after it has appeared
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+// Set up the observer
+const observer = new IntersectionObserver(handleIntersection);
+
+// Select the elements to observe
+const contactDetails = document.querySelector('.contact-details');
+const contactForm = document.querySelector('.contact-form');
+
+// Start observing the elements
+observer.observe(contactDetails);
+observer.observe(contactForm);
+
